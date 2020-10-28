@@ -2,14 +2,14 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: '', // e.g: 'Name | Developer'
+  title: 'Azeghmi', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
   description: '', // e.g: Welcome to my website
 };
 
 // HERO DATA
 export const heroData = {
-  title: '',
+  title: 'azeghmidev',
   name: '',
   subtitle: '',
   cta: '',
@@ -17,11 +17,11 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
+  img: 'profilepic.jpg',
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: 'https://drive.google.com/drive/folders/1DJT09TMbAbRx658S-3DSrFwJzQSkVpTq', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -33,7 +33,7 @@ export const projectsData = [
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/azeghmi/azeghmidev.git', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
@@ -59,7 +59,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'zeghmi.amine@gmail.com',
 };
 
 // FOOTER DATA
@@ -67,12 +67,12 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
+      name: 'facebook',
       url: '',
     },
     {
       id: nanoid(),
-      name: 'codepen',
+      name: 'Instagram',
       url: '',
     },
     {

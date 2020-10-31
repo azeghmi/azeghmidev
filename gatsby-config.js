@@ -5,7 +5,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-no-javacript`,
     {
       resolve: 'gatsby-plugin-no-sourcemaps',
     },
@@ -47,5 +46,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    `gatsby-plugin-no-javascript`,
   ],
 };

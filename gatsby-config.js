@@ -5,6 +5,9 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-no-sourcemaps',
+    },
     // {
     //   resolve: `gatsby-plugin-purgecss`,
     //   options: {

@@ -10,7 +10,7 @@ const Footer = () => {
   const { footer } = useContext(PortfolioContext);
   const { networks } = footer;
   const { isEnabled } = githubButtons;
-
+  // console.log("network = " + networks );
   return (
     <footer className="footer navbar-static-bottom">
       <Container>

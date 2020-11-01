@@ -46,6 +46,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-    `gatsby-plugin-no-javascript`,
+    // `gatsby-plugin-no-javascript`,
   ],
 };

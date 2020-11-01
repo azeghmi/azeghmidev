@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 
 // HEAD DATA
 export const headData = {
-  title: 'Azeghmi', // e.g: 'Name | Developer'
+  title: 'azeghmidev', // e.g: 'Name | Developer'
   lang: '', // e.g: en, es, fr, jp
   description: '', // e.g: Welcome to my website
 };
@@ -69,12 +69,12 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'facebook',
-      url: '',
+      url: 'https://www.facebook.com/amine.zeghmi.7',
     },
     {
       id: nanoid(),
       name: 'Instagram',
-      url: '',
+      url: 'https://www.instagram.com/amin.zg75/?hl=fr',
     },
     {
       id: nanoid(),
@@ -84,7 +84,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/azeghmi',
     },
   ],
 };

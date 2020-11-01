@@ -18,7 +18,8 @@ export const heroData = {
 // ABOUT DATA
 export const aboutData = {
   img: 'profilepic.jpg',
-  paragraphOne: '',
+  paragraphOne:
+    "Je suis un passionné de programmation et en particulier de developpement Web. Autodidacte et motivé, mon parcours m',a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
   paragraphTwo: '',
   paragraphThree: '',
   resume: 'https://drive.google.com/file/d/1OA-OUi8eG0erQnLZ6dA0kytWYg9ifIki/view?usp=sharing', // if no resume, the button will not show up

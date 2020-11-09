@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
@@ -24,16 +24,37 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#about">About</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+        <nav id="nav-wrap">
+          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+            Show navigation
+          </a>
+          <a className="mobile-btn" href="#home" title="Hide navigation">
+            Hide navigation
+          </a>
+
+          <ul id="nav" className="nav">
+            <li className="current">
+              <a className="smoothscroll" href="#home">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="smoothscroll" href="#about">
+                About
+              </a>
+            </li>
+            <li>
+              <a className="smoothscroll" href="#projects">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a className="smoothscroll" href="#contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {title}

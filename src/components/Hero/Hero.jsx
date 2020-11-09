@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
@@ -24,19 +24,29 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
+        <Navbar bg="light" expand="lg">
+          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#about">About</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
+            {title}
             <span className="text-color-main">{name || 'Your Name'}</span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {subtitle}
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>
-                {cta || 'Know more'}
+                {cta}
               </Link>
             </span>
           </p>

@@ -19,10 +19,10 @@ export const heroData = {
 export const aboutData = {
   img: 'profilepic.jpg',
   paragraphOne:
-    "Je suis un passionné de programmation et en particulier de developpement Web. Autodidacte et motivé, mon parcours m',a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
-  paragraphTwo: '',
-  paragraphThree: '',
-  resume: 'https://drive.google.com/file/d/1OA-OUi8eG0erQnLZ6dA0kytWYg9ifIki/view?usp=sharing', // if no resume, the button will not show up
+    "Actuellement à Paris, j'étudie à l'école 42, une école de programmation informatique qui se base sur l'apprentissage par projet.",
+  paragraphTwo:
+    "Je suis un passionné de programmation et en particulier de developpement Web. Autodidacte et motivé, mon parcours m'a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
+  resume: 'https://drive.google.com/file/d/1OA-OUi8eG0erQnLZ6dA0kytWYg9ifIki/view?usp=sharing',
 };
 
 // PROJECTS DATA
@@ -66,16 +66,6 @@ export const contactData = {
 // FOOTER DATA
 export const footerData = {
   networks: [
-    {
-      id: nanoid(),
-      name: 'facebook',
-      url: 'https://www.facebook.com/amine.zeghmi.7',
-    },
-    {
-      id: nanoid(),
-      name: 'Instagram',
-      url: 'https://www.instagram.com/amin.zg75/?hl=fr',
-    },
     {
       id: nanoid(),
       name: 'linkedin',

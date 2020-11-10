@@ -24,41 +24,10 @@ const Header = () => {
   return (
     <section id="hero" className="jumbotron">
       <Container>
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
-
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
             {title}
-            <span className="text-color-main">{name || 'Your Name'}</span>
+            <span className="text-color-main">{name}</span>
             <br />
             {subtitle}
           </h1>

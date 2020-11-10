@@ -21,40 +21,10 @@
   background-position: center;
   background-size: cover; */
 
-  @include respond(phone) {
-    padding: 0rem $default-font-size;
-  }
-/* nav-wrap */
-#nav-wrap {
-  font: 12px 'opensans-bold', sans-serif;
-  width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  margin: 0 auto;
-  z-index: 100;
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-.opaque { background-color: #333; }
-
-/* hide toggle button */
-#nav-wrap > a.mobile-btn { display: none; }
-
-ul#nav {
-  min-height: 48px;
-  width: auto;
-
-  /* center align the menu */
-  text-align: center;
-}
-ul#nav li {
-  position: relative;
-  list-style: none;
-  height: 48px;
-  display: inline-block;
-}
-  .hero-title {
+@include respond(phone) {
+  padding: 0rem $default-font-size;
+} 
+#hero .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
@@ -76,7 +46,7 @@ ul#nav li {
     }
   }
 
-  .hero-cta {
+  #hero .hero-cta {
     display: flex;
 
     @include respond(tab-port) {

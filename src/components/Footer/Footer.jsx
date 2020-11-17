@@ -6,7 +6,6 @@ import PortfolioContext from '../../context/context';
 const Footer = () => {
   const { footer } = useContext(PortfolioContext);
   const { networks } = footer;
-  // console.log("network = " + networks );
   return (
     <footer className="footer navbar-static-bottom">
       <Container>

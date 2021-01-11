@@ -30,29 +30,29 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Camagru',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/azeghmi/azeghmidev.git', // if no repo, the button will not show up
+    repo: 'https://github.com/azeghmi/Camagru.git',
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Matcha',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/azeghmi/Matcha.git',
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
+    title: 'Hypertube',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/azeghmi/Hypertube.git',
   },
 ];
 
@@ -69,7 +69,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/amine-zeghmi/',
     },
     {
       id: nanoid(),

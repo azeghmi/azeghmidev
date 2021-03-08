@@ -39,9 +39,10 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'Matcha.jpg',
     title: 'Matcha',
-    info: '',
+    info:
+      'Création d`un site de rencontres. Conception d`une application permettant à deux potentielles âmes soeurs de se rencontrer, de l’inscription au contact final. L`utilisateur peut s’inscrire, se connecter, compléter son profil, parcourir et rechercher d’autres utilisateurs, les liker, et chatter avec ceux qui auront liké en retour.',
     info2: '',
     url: '',
     repo: 'https://github.com/azeghmi/Matcha.git',

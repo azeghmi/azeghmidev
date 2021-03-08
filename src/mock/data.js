@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Bonjour, mon nom est ',
+  title: 'Bonjour, je suis ',
   name: 'Amine Zeghmi',
   subtitle: 'Je suis developpeur FullStack.',
   cta: 'En savoir plus',
@@ -21,7 +21,7 @@ export const aboutData = {
   paragraphOne:
     "Actuellement à Paris, j'étudie à l'école 42, une école de programmation informatique qui se base sur l'apprentissage par projet.",
   paragraphTwo:
-    "Je suis un passionné de programmation et en particulier de developpement Web. Autodidacte et motivé, mon parcours m'a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
+    "Je suis un passionné de programmation. Autodidacte et motivé, mon parcours m'a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
   resume: 'https://drive.google.com/file/d/1OA-OUi8eG0erQnLZ6dA0kytWYg9ifIki/view?usp=sharing',
 };
 

@@ -31,8 +31,9 @@ export const projectsData = [
     id: nanoid(),
     img: 'Camagru.jpg',
     title: 'Camagru',
-    info: '',
-    info2: '',
+    info:
+      'Premier projet de la branche Web de 42, mini-Instagram qui permet à des utilisateurs de se connecter et de réaliser et partager des photo-montages.',
+    info2: 'PHP/Javascript Natif, SQL',
     url: '',
     repo: 'https://github.com/azeghmi/Camagru.git',
   },

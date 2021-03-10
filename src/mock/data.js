@@ -52,10 +52,48 @@ export const projectsData = [
     img: 'Hypertube.jpg',
     title: 'Hypertube',
     info:
-      'Création dune application web permettant à un utilisateur de rechercher et visionner des vidéos. Le lecteur est intégré au site, et les vidéos sont téléchargées au travers du protocole BitTorrent. Le moteur de recherche interroge plusieurs sources externes. Une fois un élément sélectionné, il sera téléchargé sur le serveur et diffusé sur le player web en même temps. Autrement dit, le lecteur ne se contente pas d’afficher la vidéo une fois le téléchargement complété, mais est capable de streamer directement le flux.',
+      'Création d`une application web permettant à un utilisateur de rechercher et visionner des vidéos. Le lecteur est intégré au site, et les vidéos sont téléchargées au travers du protocole BitTorrent. Le moteur de recherche interroge plusieurs sources externes. Une fois un élément sélectionné, il sera téléchargé sur le serveur et diffusé sur le player web en même temps. Autrement dit, le lecteur ne se contente pas d’afficher la vidéo une fois le téléchargement complété, mais est capable de streamer directement le flux.',
     info2: 'ReactJS, NodeJS, ExpressJS, SQL',
     url: '',
     repo: 'https://github.com/azeghmi/Hypertube.git',
+  },
+  {
+    id: nanoid(),
+    img: 'fdf.jpg',
+    title: 'Fil de fer',
+    info:
+      'Modélisateur 3D prenant en entrée des coordonnées et retourne graphiquement la représentation schématique d’un terrain en relief',
+    info2: 'C, minilibX',
+    url: '',
+    repo: 'https://github.com/azeghmi/Fdf.git',
+  },
+  {
+    id: nanoid(),
+    img: '',
+    title: 'Minishell',
+    info: 'Mini-interpreteur de commandes SHELL',
+    info2: 'C',
+    url: '',
+    repo: 'https://github.com/azeghmi/Minishell.git',
+  },
+  {
+    id: nanoid(),
+    img: '',
+    title: 'fillit',
+    info:
+      'Algorithme de backtracking permettant de positionner des pièces de tetris dans le plus petit carré possible',
+    info2: 'C',
+    url: '',
+    repo: 'https://github.com/azeghmi/fillit.git',
+  },
+  {
+    id: nanoid(),
+    img: '',
+    title: 'Libft',
+    info: 'Réécriture et optimisation des fonctions de la libC',
+    info2: 'C',
+    url: '',
+    repo: 'https://github.com/azeghmi/libft.git',
   },
 ];
 

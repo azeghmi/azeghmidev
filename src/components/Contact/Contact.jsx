@@ -23,7 +23,7 @@ const Contact = () => {
               className="cta-btn cta-btn--resume"
               href={email ? `mailto:${email}` : 'zeghmi.amine@gmail.com'}
             >
-              {btn || 'Contactez moi par mail!'}
+              {btn || 'zeghmi.amine@gmail.com'}
             </a>
           </div>
         </Fade>

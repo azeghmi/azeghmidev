@@ -69,7 +69,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: '',
+    img: 'project.jpg',
     title: 'Minishell',
     info: 'Mini-interpreteur de commandes SHELL',
     info2: 'C',
@@ -78,7 +78,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: '',
+    img: 'fillit.jpg',
     title: 'fillit',
     info:
       'Algorithme de backtracking permettant de positionner des pièces de tetris dans le plus petit carré possible',
@@ -88,7 +88,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: '',
+    img: 'libft.jpg',
     title: 'Libft',
     info: 'Réécriture et optimisation des fonctions de la libC',
     info2: 'C',

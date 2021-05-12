@@ -22,7 +22,7 @@ export const aboutData = {
     "Actuellement à Paris, j'étudie à l'école 42, une école de programmation informatique qui se base sur l'apprentissage par projet.",
   paragraphTwo:
     "Je suis un passionné de programmation. Autodidacte et motivé, mon parcours m'a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
-  resume: 'https://drive.google.com/file/d/1OA-OUi8eG0erQnLZ6dA0kytWYg9ifIki/view?usp=sharing',
+, resume: 'https://drive.google.com/file/d/1EjiSHn-LXMSsZk3-PBT89KqSPAXRyqJj/view?usp=sharing'
 };
 
 // PROJECTS DATA

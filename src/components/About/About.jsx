@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
-import Modal from '../Modal/Modal';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -42,7 +41,14 @@ const About = () => {
                 <p className="about-wrapper__info-text">{paragraphTwo}</p>
                 {resume && (
                   <span className="d-flex mt-3">
-                   <Modal></Modal>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cta-btn cta-btn--resume"
+                      href={resume}
+                    >
+                      Curriculum Vitae
+                    </a>
                   </span>
                 )}
               </div>

@@ -7,7 +7,7 @@ import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, resume } = about;
+  const { img, paragraphOne, paragraphTwo, resume, skills } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -27,18 +27,27 @@ const About = () => {
       <Container>
         <Title title="À propos" />
         <Row className="about-wrapper">
-          <Col md={6} sm={12}>
-            <Fade bottom duration={1000} delay={600} distance="30px">
+          <Col md={5} sm={12}>
+            <Fade bottom duration={1000} delay={400} distance="30px">
               <div className="about-wrapper__image">
                 <AboutImg alt="profile picture" filename={img} />
               </div>
             </Fade>
           </Col>
-          <Col md={6} sm={12}>
-            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+          <Col md={7} sm={12}>
+            <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={700} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">{paragraphOne}</p>
                 <p className="about-wrapper__info-text">{paragraphTwo}</p>
+                {skills && skills.length > 0 && (
+                  <ul className="about-wrapper__skills">
+                    {skills.map((skill) => (
+                      <li key={skill} className="skill-pill">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
@@ -47,7 +56,7 @@ const About = () => {
                       className="cta-btn cta-btn--resume"
                       href={resume}
                     >
-                      Curriculum Vitae
+                      Télécharger le CV
                     </a>
                   </span>
                 )}

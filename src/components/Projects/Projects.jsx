@@ -1,10 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Fade from 'react-reveal/Fade';
-import Tilt from 'react-tilt';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
+
+const splitTags = (info2) =>
+  (info2 || '')
+    .split(/[,/]/)
+    .map((tag) => tag.trim())
+    .filter(Boolean);
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);
@@ -22,91 +27,100 @@ const Projects = () => {
     }
   }, []);
 
+  const featured = projects.filter((project) => project.featured);
+  const other = projects.filter((project) => !project.featured);
+
   return (
     <section id="projects">
       <Container>
         <div className="project-wrapper">
           <Title title="Projets" />
-          {projects.map((project) => {
-            const { title, info, info2, url, repo, img, id } = project;
+          {featured.map((project) => {
+            const { title, info, info2, repo, img, id } = project;
+            const tags = splitTags(info2);
 
             return (
-              <Row key={id}>
-                <Col lg={4} sm={12}>
-                  <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={500}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
-                      <div>
-                        <p>{info || 'info1'}</p>
-                        <p className="mb-4">{info2 || 'info2'} </p>
-                      </div>
-                      {/* <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="cta-btn cta-btn--hero"
-                        href={url || '#!'}
-                      >
-                        See Live
-                      </a> */}
-
-                      {repo && (
-                        <a
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
-                          href={repo}
-                        >
-                          Source Code
-                        </a>
-                      )}
-                    </div>
-                  </Fade>
-                </Col>
-                <Col lg={8} sm={12}>
-                  <Fade
-                    right={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={1000}
-                    distance="30px"
-                  >
-                    <div className="project-wrapper__image">
+              <Fade
+                key={id}
+                left={isDesktop}
+                bottom={isMobile}
+                duration={800}
+                delay={200}
+                distance="30px"
+              >
+                <article className="project-featured">
+                  <div className="project-featured__text">
+                    <h3 className="project-featured__title">{title}</h3>
+                    <p className="project-featured__info">{info}</p>
+                    {tags.length > 0 && (
+                      <ul className="project-featured__tags">
+                        {tags.map((tag) => (
+                          <li key={tag} className="skill-pill">
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {repo && (
                       <a
-                        href={url || '#!'}
                         target="_blank"
-                        aria-label="Project Link"
                         rel="noopener noreferrer"
+                        className="cta-btn cta-btn--ghost"
+                        href={repo}
                       >
-                        <Tilt
-                          options={{
-                            reverse: false,
-                            max: 8,
-                            perspective: 1000,
-                            scale: 1,
-                            speed: 300,
-                            transition: true,
-                            axis: null,
-                            reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
-                          }}
-                        >
-                          <div data-tilt className="thumbnail rounded">
-                            <ProjectImg alt={title} filename={img} />
-                          </div>
-                        </Tilt>
+                        Code source
                       </a>
-                    </div>
-                  </Fade>
-                </Col>
-              </Row>
+                    )}
+                  </div>
+                  <div className="project-featured__image">
+                    <ProjectImg alt={title} filename={img} />
+                  </div>
+                </article>
+              </Fade>
             );
           })}
+
+          {other.length > 0 && (
+            <div className="projects-grid">
+              {other.map((project) => {
+                const { title, info, info2, repo, img, id } = project;
+                const tags = splitTags(info2);
+
+                return (
+                  <Fade key={id} bottom duration={800} delay={150} distance="20px">
+                    <article className="project-card">
+                      <div className="project-card__image">
+                        <ProjectImg alt={title} filename={img} />
+                      </div>
+                      <div className="project-card__body">
+                        <h3 className="project-card__title">{title}</h3>
+                        <p className="project-card__info">{info}</p>
+                        {tags.length > 0 && (
+                          <ul className="project-card__tags">
+                            {tags.map((tag) => (
+                              <li key={tag} className="skill-pill">
+                                {tag}
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        {repo && (
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cta-btn cta-btn--ghost"
+                            href={repo}
+                          >
+                            Code source
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  </Fade>
+                );
+              })}
+            </div>
+          )}
         </div>
       </Container>
     </section>

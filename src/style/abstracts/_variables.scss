@@ -1,17 +1,22 @@
 // COLORS
-$primary-color: #02aab0;
-$secondary-color: #00cdac;
+$bg: #0a0c10;
+$bg-elevated: #12151c;
+$surface: #181c25;
+$border: rgba(255, 255, 255, 0.08);
+$text: #eef2f6;
+$muted: #8b93a7;
+$accent: #5eead4;
+$accent-dim: rgba(94, 234, 212, 0.12);
+$accent-strong: #2dd4bf;
 
-// $primary-color: #7f449d;
-// $secondary-color: #793fc1;
-
-$white-color: #fff;
-
-$dark-grey: #333333;
-
-$dark-blue-text: #272341; // For Headings
+// Backward-compatible aliases
+$primary-color: $accent;
+$secondary-color: $accent-strong;
+$white-color: $text;
+$dark-grey: $bg;
+$dark-blue-text: $text;
 
 // FONT SIZE
 $default-font-size: 1.6rem;
-$big-font-size: 4rem;
-$mid-font-size: 2.5rem;
+$big-font-size: 3.6rem;
+$mid-font-size: 2.2rem;

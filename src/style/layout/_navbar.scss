@@ -1,0 +1,62 @@
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.6rem 0;
+  background: rgba(10, 12, 16, 0.72);
+  border-bottom: 1px solid $border;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: $text;
+    letter-spacing: -0.04em;
+    cursor: pointer;
+
+    span {
+      color: $accent;
+    }
+
+    &:hover {
+      color: $text;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 2.8rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $muted;
+      cursor: pointer;
+
+      &:hover {
+        color: $text;
+      }
+    }
+
+    @include respond(phone) {
+      gap: 1.6rem;
+
+      a {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

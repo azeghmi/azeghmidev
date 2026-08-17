@@ -1,77 +1,146 @@
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
-  margin-top: -15rem;
-  padding-top: 15rem;
+  background-color: $bg;
+  color: $text;
+  margin-top: 0;
+  padding-top: 10rem;
+  border-top: 1px solid $border;
 
   @include respond(tab-land) {
     margin-top: 0;
-    padding-top: 5rem;
+    padding-top: 6rem;
   }
 
   .project-wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 0;
 
     @include respond(phone) {
-      margin-bottom: 0rem;
+      margin-bottom: 0;
+    }
+  }
+
+  .project-featured {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    text-align: left;
+    background: $surface;
+    border: 1px solid $border;
+    border-radius: 2rem;
+    padding: 3.2rem;
+    margin-bottom: 2.4rem;
+    transition: border-color 0.25s ease;
+
+    &:hover {
+      border-color: rgba(94, 234, 212, 0.35);
     }
 
-    .row {
-      margin-bottom: 8rem;
-
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      padding: 2.4rem;
+      text-align: center;
     }
 
-    &__text {
-      text-align: left;
+    &__title {
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      font-size: $mid-font-size;
+      letter-spacing: -0.03em;
+    }
 
-      @include respond(phone) {
-        margin-bottom: 2.5rem !important;
-      }
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
-      }
+    &__info {
+      color: $muted;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
 
-      &-title {
-        font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 0 0 2.4rem;
+      padding: 0;
+      list-style: none;
 
-        @include respond(phone) {
-          font-size: 2rem;
-        }
-      }
-
-      & p > a {
-        color: $secondary-color;
+      @include respond(tab-port) {
+        justify-content: center;
       }
     }
 
     &__image {
-      width: 90%;
-      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 1.2rem;
+      border: 1px solid $border;
 
-      @include respond(tab-land) {
-        width: 100%;
-        margin: 0;
+      .gatsby-image-wrapper {
+        display: block;
       }
+    }
+  }
 
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    margin-top: 4rem;
+    text-align: left;
 
-        @include respond(phone) {
-          border: 1px solid #d2d2d2;
-          box-shadow: none;
-          margin-bottom: 3.2rem;
-        }
-      }
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .project-card {
+    background: $surface;
+    border: 1px solid $border;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+      border-color: rgba(94, 234, 212, 0.35);
+      transform: translateY(-4px);
+    }
+
+    &__image {
+      border-bottom: 1px solid $border;
+    }
+
+    &__body {
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    &__info {
+      color: $muted;
+      font-size: 1.5rem;
+      line-height: 1.6;
+      margin-bottom: 1.6rem;
+      flex: 1;
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 0 0 1.8rem;
+      padding: 0;
+      list-style: none;
     }
   }
 }

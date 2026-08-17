@@ -1,8 +1,29 @@
+.jumbotron {
+  background-color: transparent;
+}
+
 html {
   font-size: 62.5%;
+  background-color: $bg;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Outfit', 'Montserrat', sans-serif;
   text-align: center;
+  background-color: $bg;
+  color: $text;
+}
+
+::selection {
+  background: $accent;
+  color: $bg;
+}
+
+a {
+  color: $accent;
+}
+
+img {
+  max-width: 100%;
 }

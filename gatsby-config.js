@@ -59,11 +59,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Simplefolio`,
-        short_name: `Simplefolio`,
+        name: `Amine Zeghmi`,
+        short_name: `azeghmidev`,
         start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#02aab0`,
+        background_color: `#0a0c10`,
+        theme_color: `#0a0c10`,
         display: `standalone`,
         icon: 'src/images/favicon.png',
       },

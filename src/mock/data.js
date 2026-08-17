@@ -5,14 +5,14 @@ export const headData = {
   title: 'Amine Zeghmi | Développeur Backend',
   lang: 'fr',
   description:
-    'Portfolio d’Amine Zeghmi, développeur Backend à Paris. Projets web, C et applications réalisées à 42.',
+    'Portfolio d’Amine Zeghmi, développeur Backend à Paris. APIs, bases SQL, C et services conçus à 42.',
 };
 
 // HERO DATA
 export const heroData = {
   title: 'Bonjour, je suis',
   name: 'Amine Zeghmi',
-  subtitle: 'Développeur Backend à Paris, formé à 42.',
+  subtitle: 'Développeur Backend à Paris. APIs, bases de données et services, formé à 42.',
   cta: 'Voir les projets',
 };
 
@@ -20,10 +20,10 @@ export const heroData = {
 export const aboutData = {
   img: 'profilepic.jpg',
   paragraphOne:
-    "Actuellement à Paris, j'étudie à l'école 42, une école de programmation informatique qui se base sur l'apprentissage par projet.",
+    'Je conçois des APIs, des bases SQL et des services backend. Formé à 42 à Paris, je travaille surtout en C, Node.js et PHP, avec un fort tropisme Linux et bases de données.',
   paragraphTwo:
-    "Passionné de programmation, autodidacte et motivé, mon parcours m'a permis d'explorer plusieurs secteurs de l'informatique. Je vous invite à parcourir mon CV.",
-  skills: ['JavaScript', 'React', 'Node.js', 'PHP', 'SQL', 'C'],
+    'Autodidacte et habitué à apprendre par la pratique, je m’intéresse à l’auth, la modélisation des données, la concurrence et la fiabilité des services. Vous pouvez télécharger mon CV ou parcourir mes projets ci-dessous.',
+  skills: ['C', 'Linux', 'SQL', 'Node.js', 'Express', 'PHP', 'Git'],
   resume:
     'https://drive.google.com/file/d/1lMnKhMPgbhUzILxCgkKrHY5lui-UJGAQ/view?usp=sharing',
 };
@@ -32,13 +32,13 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'Camagru.jpg',
-    title: 'Camagru',
+    img: 'Hypertube.jpg',
+    title: 'Hypertube',
     info:
-      'Premier projet de la branche Web de 42, mini-Instagram qui permet à des utilisateurs de se connecter et de réaliser et partager des photo-montages.',
-    info2: 'PHP, JavaScript, SQL',
+      'Plateforme de streaming : recherche multi-sources, téléchargement BitTorrent côté serveur et lecture en flux. Backend Node/Express, streaming progressif sans attendre la fin du download.',
+    info2: 'Node.js, Express, SQL',
     url: '',
-    repo: 'https://github.com/azeghmi/Camagru.git',
+    repo: 'https://github.com/azeghmi/Hypertube.git',
     featured: true,
   },
   {
@@ -46,48 +46,49 @@ export const projectsData = [
     img: 'Matcha.jpg',
     title: 'Matcha',
     info:
-      "Création d'un site de rencontres. Conception d'une application permettant à deux potentielles âmes sœurs de se rencontrer, de l’inscription au contact final. L'utilisateur peut s’inscrire, se connecter, compléter son profil, parcourir et rechercher d’autres utilisateurs, les liker, et chatter avec ceux qui auront liké en retour.",
-    info2: 'HTML, CSS, Handlebars, SQL',
+      'Application de rencontres : inscription, profils, recherche, likes et chat. Backend centré sur l’auth, le schéma SQL, le matching et la messagerie.',
+    info2: 'SQL, Handlebars, HTML',
     url: '',
     repo: 'https://github.com/azeghmi/Matcha.git',
     featured: true,
   },
   {
     id: nanoid(),
-    img: 'Hypertube.jpg',
-    title: 'Hypertube',
+    img: 'project.jpg',
+    title: 'Minishell',
     info:
-      "Création d'une application web permettant à un utilisateur de rechercher et visionner des vidéos. Le lecteur est intégré au site, et les vidéos sont téléchargées au travers du protocole BitTorrent. Le moteur de recherche interroge plusieurs sources externes. Une fois un élément sélectionné, il sera téléchargé sur le serveur et diffusé sur le player web en même temps.",
-    info2: 'React, Node.js, Express, SQL',
+      'Interpréteur de commandes type bash : parsing, processus, pipes, redirections et variables d’environnement. Projet systèmes qui montre la maîtrise de Linux et du C.',
+    info2: 'C, Linux',
     url: '',
-    repo: 'https://github.com/azeghmi/Hypertube.git',
+    repo: 'https://github.com/azeghmi/Minishell.git',
     featured: true,
+  },
+  {
+    id: nanoid(),
+    img: 'Camagru.jpg',
+    title: 'Camagru',
+    info:
+      'Mini-Instagram : comptes, sessions, photo-montages et partage. Backend PHP/SQL (auth, stockage des images, galerie).',
+    info2: 'PHP, SQL, JavaScript',
+    url: '',
+    repo: 'https://github.com/azeghmi/Camagru.git',
   },
   {
     id: nanoid(),
     img: 'fdf.jpg',
     title: 'Fil de fer',
     info:
-      'Modélisateur 3D prenant en entrée des coordonnées et retourne graphiquement la représentation schématique d’un terrain en relief.',
+      'Visualisation 3D d’un terrain à partir de coordonnées. Parsing de fichiers, projections et rendu avec minilibX.',
     info2: 'C, minilibX',
     url: '',
     repo: 'https://github.com/azeghmi/Fdf.git',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: 'Minishell',
-    info: 'Mini-interpréteur de commandes SHELL.',
-    info2: 'C',
-    url: '',
-    repo: 'https://github.com/azeghmi/Minishell.git',
-  },
-  {
-    id: nanoid(),
     img: 'fillit.jpg',
     title: 'fillit',
     info:
-      'Algorithme de backtracking permettant de positionner des pièces de Tetris dans le plus petit carré possible.',
+      'Placement de pièces de Tetris dans le plus petit carré possible, via un algorithme de backtracking en C.',
     info2: 'C',
     url: '',
     repo: 'https://github.com/azeghmi/fillit.git',
@@ -96,7 +97,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'libft.png',
     title: 'Libft',
-    info: 'Réécriture et optimisation des fonctions de la libC.',
+    info: 'Réécriture et optimisation des fonctions de la libC, base de tous les projets 42 en C.',
     info2: 'C',
     url: '',
     repo: 'https://github.com/azeghmi/libft.git',

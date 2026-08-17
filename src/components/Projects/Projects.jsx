@@ -34,10 +34,13 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Projets" />
-          {featured.map((project) => {
+          <Title title="Projets 42" />
+          {featured.map((project, index) => {
             const { title, info, info2, repo, img, id } = project;
             const tags = splitTags(info2);
+            const hasImage = img && img !== 'project.jpg';
+            const featuredClass =
+              index % 2 === 1 ? 'project-featured project-featured--reverse' : 'project-featured';
 
             return (
               <Fade
@@ -48,7 +51,7 @@ const Projects = () => {
                 delay={200}
                 distance="30px"
               >
-                <article className="project-featured">
+                <article className={featuredClass}>
                   <div className="project-featured__text">
                     <h3 className="project-featured__title">{title}</h3>
                     <p className="project-featured__info">{info}</p>
@@ -73,7 +76,21 @@ const Projects = () => {
                     )}
                   </div>
                   <div className="project-featured__image">
-                    <ProjectImg alt={title} filename={img} />
+                    {hasImage ? (
+                      <ProjectImg alt={title} filename={img} />
+                    ) : (
+                      <div className="project-featured__placeholder">
+                        <span>
+                          $ ./minishell
+                          <br />
+                          {'>'} ls -la
+                          <br />
+                          {'>'} echo $PATH
+                          <br />
+                          {'>'}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </article>
               </Fade>

@@ -3,6 +3,7 @@
   color: $muted;
   padding: 3.2rem 0 4rem;
   border-top: 1px solid $border;
+  text-align: center;
 
   @include respond(phone) {
     border: 0px;

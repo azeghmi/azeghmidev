@@ -5,28 +5,60 @@ export const headData = {
   title: 'Amine Zeghmi | Développeur Backend',
   lang: 'fr',
   description:
-    'Portfolio d’Amine Zeghmi, développeur Backend à Paris. APIs, bases SQL, C et services conçus à 42.',
+    'Portfolio d’Amine Zeghmi, développeur Backend à Paris. CDI HashCode, puis SZGGroup. Formé à 42.',
 };
 
 // HERO DATA
 export const heroData = {
   title: 'Bonjour, je suis',
   name: 'Amine Zeghmi',
-  subtitle: 'Développeur Backend à Paris. APIs, bases de données et services, formé à 42.',
-  cta: 'Voir les projets',
+  subtitle:
+    'Développeur Backend à Paris. Deux ans en CDI chez HashCode (C#, SQL, SAP), puis quatre ans à concevoir des algorithmes de marché chez SZGGroup.',
+  cta: 'Voir le parcours',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profilepic.jpg',
   paragraphOne:
-    'Je conçois des APIs, des bases SQL et des services backend. Formé à 42 à Paris, je travaille surtout en C, Node.js et PHP, avec un fort tropisme Linux et bases de données.',
+    'Deux ans en CDI chez HashCode, en mission au service IT de Scamark (groupe Leclerc) : APIs SAP, outils de reporting et de migration, bases SQL. Depuis 2023, je développe chez SZGGroup des algorithmes opérant sur les marchés, avec de la donnée en masse et des stratégies automatiques.',
   paragraphTwo:
-    'Autodidacte et habitué à apprendre par la pratique, je m’intéresse à l’auth, la modélisation des données, la concurrence et la fiabilité des services. Vous pouvez télécharger mon CV ou parcourir mes projets ci-dessous.',
-  skills: ['C', 'Linux', 'SQL', 'Node.js', 'Express', 'PHP', 'Git'],
+    'Formé à 42 à Paris (C, Unix, projets web). Je cherche un poste de développeur junior, avec un socle backend solide : C#, SQL, PostgreSQL et la production.',
+  skills: ['C#', 'SQL', 'PostgreSQL', 'Azure DevOps', 'SAP', 'Java', 'C', 'Node.js', 'Git'],
   resume:
     'https://drive.google.com/file/d/1lMnKhMPgbhUzILxCgkKrHY5lui-UJGAQ/view?usp=sharing',
 };
+
+// EXPERIENCE DATA
+export const experienceData = [
+  {
+    id: nanoid(),
+    period: '2023 – 2026',
+    company: 'SZGGroup',
+    role: 'Conception d’algorithmes de marché',
+    info:
+      'Récolte et traitement de données en masse, analyses et rapports statistiques, développement de stratégies automatiques opérant sur les marchés.',
+    tags: 'Données, Algorithmes, Statistiques',
+  },
+  {
+    id: nanoid(),
+    period: '2021 – 2023',
+    company: 'HashCode',
+    role: 'Ingénieur Étude et Développement — CDI',
+    info:
+      'Prestataire junior au service IT de Scamark (groupe Leclerc). Gestion des API SAP, outils de reporting et de migration, tests unitaires et monitoring des requêtes.',
+    tags: 'C#, SQL, PostgreSQL, Azure DevOps, SAP',
+  },
+  {
+    id: nanoid(),
+    period: '2016 – 2017',
+    company: 'Best IS Solutions',
+    role: 'Concepteur / Développeur — application de gestion hôtelière',
+    info:
+      'Expression de besoins client, développement du logiciel de gestion des réservations (interface, base de données et backend), tests et mise en production. Alger.',
+    tags: 'Java, Hibernate, SQL',
+  },
+];
 
 // PROJECTS DATA
 export const projectsData = [
@@ -47,7 +79,7 @@ export const projectsData = [
     title: 'Matcha',
     info:
       'Application de rencontres : inscription, profils, recherche, likes et chat. Backend centré sur l’auth, le schéma SQL, le matching et la messagerie.',
-    info2: 'SQL, Handlebars, HTML',
+    info2: 'Node.js, SQL, HTML',
     url: '',
     repo: 'https://github.com/azeghmi/Matcha.git',
     featured: true,

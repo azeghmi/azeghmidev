@@ -12,9 +12,19 @@
     margin-top: 0;
   }
 
+  .section-title {
+    text-align: center;
+
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   .contact-wrapper {
     margin-top: 0;
     padding: 0 2rem;
+    text-align: center;
     backface-visibility: hidden;
 
     &__text {

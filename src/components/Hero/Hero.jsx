@@ -5,8 +5,9 @@ import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
-  const { hero } = useContext(PortfolioContext);
+  const { hero, footer } = useContext(PortfolioContext);
   const { title, name, subtitle, cta } = hero;
+  const { networks } = footer;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -26,16 +27,14 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={400} distance="30px">
           <p className="hero-kicker">{title || 'Bonjour, je suis'}</p>
-          <h1 className="hero-title">
-            <span className="text-color-main">{name}</span>
-          </h1>
+          <h1 className="hero-title">{name}</h1>
           <p className="hero-subtitle">{subtitle}</p>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={800} distance="30px">
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
-              <Link to="projects" smooth duration={800} offset={-70}>
-                {cta || 'Voir les projets'}
+              <Link to="experience" smooth duration={800} offset={-70}>
+                {cta || 'Voir le parcours'}
               </Link>
             </span>
             <span className="cta-btn cta-btn--ghost">
@@ -44,6 +43,20 @@ const Header = () => {
               </Link>
             </span>
           </p>
+          {networks && networks.length > 0 && (
+            <ul className="hero-social">
+              {networks.map((network) => {
+                const { id, name: networkName, url } = network;
+                return (
+                  <li key={id}>
+                    <a href={url} rel="noopener noreferrer" target="_blank" aria-label={networkName}>
+                      <i className={`fa fa-${networkName || 'refresh'}`} />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
         </Fade>
       </Container>
     </section>
